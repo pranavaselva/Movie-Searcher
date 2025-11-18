@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movie Searcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1 class="title">Movie Searcher</h1>
+        <p class="subtitle">Search movies powered by OMDb</p>
+        <div class="search-row">
+          <label for="search" class="visually-hidden">Search movies</label>
+          <input
+            id="search"
+            class="search-input"
+            type="search"
+            placeholder="Search for movies, e.g. Inception"
+            autocomplete="off"
+          />
+          <button id="clearBtn" class="btn clear-btn" title="Clear search">
+            ✕
+          </button>
+        </div>
+      </header>
+
+      <section id="status" class="status"></section>
+
+      <section id="results" class="results"></section>
+
+      <!-- Modal for details -->
+      <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div
+          class="modal-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modalTitle"
+        >
+          <button id="modalClose" class="btn modal-close" aria-label="Close">
+            ✕
+          </button>
+          <div id="modalContent" class="modal-content"></div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <small
+          >Data from
+          <a href="https://www.omdbapi.com/" target="_blank" rel="noopener"
+            >OMDb API</a
+          >. Add your API key in <code>script.js</code>.</small
+        >
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
